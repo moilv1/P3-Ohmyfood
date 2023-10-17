@@ -4,6 +4,9 @@
 main {
     width: 100%;
 }
+a {
+    text-decoration: none;
+}
 
 /****** Media queries ***********/
 /* Medium devices (mobils, less/equal than 425px) */
@@ -95,10 +98,11 @@ main {
     }
 
     /***** Fonctionnement *****/
-
+    .Fonctionnement {
+        margin-bottom: 100px;
+    }
     .Fonctionnement h2 {
         padding-left: 20px;
-        
     }
     .Boutton {
         display: flex;
@@ -120,7 +124,7 @@ main {
         margin-right: auto;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .circle {
         margin-top: auto;
@@ -137,5 +141,76 @@ main {
     }
     .fa-solid.fa-store.fa-lg {
         color: #9356DC;
+    }
+
+    /***** Restaurants *****/
+    .Restaurants {
+        background-color: #F6F6F6;
+        width: 100%;
+        padding-top: 30px;
+    }
+    .Restaurants h2 {
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-restaurant {
+        width: 95%;
+        height: 341px;
+       
+    }
+    .Restaurants img {
+        width: 100%;
+        height: 230px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    .restaurant-cards {
+        background-color: white;
+        border-radius: 20px 20px;
+        margin-left: 15px;
+        margin-bottom: 18px;
+        flex-direction: column;
+    }
+    .article-restaurant a {
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-cards h3,p  {
+        margin-left: 15px;
+        line-height: 10px;
+    }
+    .restaurants-cards p {
+        margin-bottom: 3;
+    }
+    .fa-heart {
+        position: relative;
+        left: 85%; 
+        bottom: 50px;
+    }
+    /***** Footer*****/
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        color: white;
+        padding: 22px 25px;
+    }
+    footer .logo {
+        font-family: Shrikhand;
+    }
+    footer .liens {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    footer .liens a i {
+        padding-right:6px ;
+    }
+    .liens a {
+        color: white;
     }
 }
