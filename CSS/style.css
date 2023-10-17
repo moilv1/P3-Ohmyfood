@@ -65,7 +65,7 @@ main {
         margin-top: 30px;
         margin-bottom:18px; 
         text-align: center;
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 700;
     }
     .hero h3 {
@@ -115,7 +115,7 @@ main {
     }
     .Fonctionnement article {
         display: flex;
-        width: 80%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
