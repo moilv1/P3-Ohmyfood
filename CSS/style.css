@@ -9,7 +9,7 @@ a {
 }
 
 
-/* Medium devices (mobils, less/equal than 425px) */
+/*  devices -> (mobils, less/equal than 425px) */
 @media (max-width: 425px) {
 
     /***** Header *****/
@@ -178,7 +178,7 @@ a {
         line-height: 10px;
     }
     
-    .fa-heart {
+    .empty-heart{
         position: relative;
         left: 85%; 
         bottom: 50px;
@@ -235,18 +235,700 @@ a {
     }
 }
 
+/*------------------------------------------------------------------*/
+/* devices -> ( mobils, more than 425.9px)*/
+@media (min-width: 425.9px ) {
 
+    /***** Header *****/
+    header {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 200px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+    #logo{
+        display: flex;
+        text-align: center;
+        width: 60%;
+        margin:auto;
+        padding: 30px 0 30px 0;
+    }
+    
+    .location {
+        width: 100%;
+        background: var(--Grey-2, #EAEAEA);
+        display: flex;
+        justify-content: center;
+    }
+    .location p {
+        font-weight: bold;
+        color: var(--Grey, #353535);;
+    }
+    .location .fa-solid {
+        color: var(--Grey, #353535);
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+    }
 
+    /***** hero *****/
 
+    .hero{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+        padding: 30px 0 30px 0px;
+
+        /*Background*/
+        background: var(--Background, #F6F6F6);
+    }
+    .hero h1{
+        margin-top: 30px;
+        margin-bottom:18px; 
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .hero h3 {
+        margin-bottom: 18px;
+        color: var(--Grey, #353535);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .hero #Boutton {
+        text-decoration: none;
+        padding: 13px 18.75px 13px 18.75px;
+        height: 50px;
+        border-radius: 25px;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        color: white;
+
+        /* Shadow/Button */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    .hero #Boutton:hover {
+        background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
+    }
+    .Boutton-box {
+        margin-top: 18px;
+        margin-bottom: 30px;
+    }
+
+    /***** Fonctionnement *****/
+    .Fonctionnement {
+        margin-bottom: 100px;
+    }
+    .Fonctionnement h2 {
+        padding-left: 20px;
+    }
+    .Boutton {
+        display: flex;
+        gap: 30px;
+    }
+    .Boutton .fa-solid {
+        color: #7E7E7E;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 5px;
+    }
+    .Boutton h3 {
+        font-weight: 549;
+    }
+    .Fonctionnement article {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    .circle {
+        margin-top: auto;
+        margin-bottom: auto;
+        border: solid 1px #9356DC;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 100%;
+        padding: 0 5px 0 5px;
+        line-height: normal;
+
+        position: relative;
+        right: 10px;
+    }
+    .fa-solid.fa-store.fa-lg {
+        color: #9356DC;
+    }
+
+    /***** Restaurants *****/
+    .Restaurants {
+        background-color: #F6F6F6;
+        width: 100%;
+        padding-top: 30px;
+    }
+    .Restaurants h2 {
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-restaurant {
+        width: 95%;
+        height: 341px;
+    }
+    .Restaurants img {
+        width: 100%;
+        height: 230px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    .restaurant-cards {
+        background-color: white;
+        border-radius: 20px 20px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .article-restaurant a {
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-cards h3,p  {
+        margin-left: 15px;
+        line-height: 10px;
+    }
+    
+    .empty-heart{
+        position: relative;
+        left: 85%; 
+        bottom: 50px;
+    }
+    .Badge {
+        position: relative;
+        width: 25%;
+        height: 30px;
+        background-color:rgba(153, 226, 208, 1) ;
+        border-radius: 2px;
+        line-height: 1px;
+    }
+    .Badge--1{
+        position: absolute;
+        top: 1040px;
+        left: 65%;
+    }
+    .Badge--2{
+        position: absolute;
+        top: 1380px;
+        left: 65%;
+        
+    }
+    .Badge--p {
+        margin-top: auto;
+        margin-left: 0px;
+        padding-top: 10px;
+        margin-bottom: auto;
+        text-align: center;
+        color: var(--Green-Font, #008766);;
+        
+    }
+    /***** Footer*****/
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        color: white;
+        padding: 22px 25px;
+    }
+    footer .logo {
+        font-family: Shrikhand;
+    }
+    footer .liens {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    footer .liens a i {
+        padding-right:6px ;
+    }
+    .liens a {
+        color: white;
+    }
+
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------/*
 
+/* devices -> (desktop, 768px) */
+@media (min-width: 768px ) {
+    header{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 200px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+    .logo-icon #logo{
+        display: flex;
+        text-align: center;
+        width: 25%;
+        margin:auto;
+        padding: 30px 0 30px 0;
+    }
+    .location {
+        width: 100%;
+        background: var(--Grey-2, #EAEAEA);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-top: auto;
+        gap: 17px;
+        color: var(--Grey, #353535);
+    }
+    .location .fa-solid {
+        color: var(--Grey, #353535);
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .location p {
+        font-weight: bold;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 3px 0 30px 0px;
 
+        /*Background*/
+        background: var(--Background, #F6F6F6);
+    }
+    .hero h1{
+        margin-top: 30px;
+        margin-bottom:18px; 
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .hero h3 {
+        margin-bottom: 18px;
+        color: var(--Grey, #353535);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: n1;
+    }
+    .hero #Boutton {
+        text-decoration: none;
+        padding: 13px 18.75px 13px 18.75px;
+        height: 50px;
+        border-radius: 25px;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        color: white;
 
+        /* Shadow/Button */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    .hero #Boutton:hover {
+        background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
+    }
+    .Boutton-box {
+        margin-top: 18px;
+        margin-bottom: 30px;
+    } 
 
+    .Fonctionnement {
+        margin-bottom: 50px;
+        padding: 0 0px 0 0px;
+    }
+    .Fonctionnement h2 {
+        padding-left: 20px;
+    }
+    .desktop-line {
+        display: flex;
+        padding-left: 20px;
+    }
+    .Boutton {
+        display: flex;
+        gap: 35px;
+    }
+    .Boutton .fa-solid {
+        color: #7E7E7E;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
+    }
+    .Boutton h3 {
+        font-weight: 549;
+    }
+    .Fonctionnement article {
+        display: flex;
+        width: 150%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
+    .circle {
+        margin-top: auto;
+        margin-bottom: auto;
+        border: solid 1px #9356DC;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 100%;
+        padding: 0 5px 0 5px;
+        line-height: normal;
 
-/****** Media queries ***********/
-/* Medium devices (desktop, 1440px) */
+        position: relative;
+        right: 10px;
+    }
+    .fa-solid.fa-store.fa-lg {
+        color: #9356DC;
+    }
+
+    /***** Restaurants *****/
+    .Restaurants {
+        max-width: 100%;
+        background-color: #F6F6F6;
+        padding:15px 0 0 0;
+    }
+    .Restaurants h2 {
+        padding-left: 20px;
+    }
+    .cards-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .article-restaurant {
+        width: 98%;
+        height: 341px;
+    }
+    .Restaurants img {
+        width: 100%;
+        height: 230px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    .restaurant-cards {
+        background-color: white;
+        border-radius: 20px 20px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .article-restaurant a {
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-cards h3,p  {
+        margin-left: 15px;
+        line-height: 10px;
+    }
+    .empty-heart{
+        position: relative;
+        left: 85%;
+        bottom: 40px;
+    }
+    .Badge {
+        position: relative;
+        width: 20%;
+        height: 30px;
+        background-color:rgba(153, 226, 208, 1) ;
+        border-radius: 2px;
+        line-height: 1px;
+    }
+    .Badge--1{
+        position: absolute;
+        top: 760px;
+        left: 70%;
+    }
+    .Badge--2{
+        position: absolute;
+        top:1110px;
+        left:70%;
+    }
+    .Badge--p {
+        margin-top: auto;
+        margin-left: 0px;
+        padding-top: 10px;
+        text-align: center;
+        color: var(--Green-Font, #008766);;
+    }
+    /***** Footer*****/
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: #353535;
+        color: white;
+        padding: 22px 25px;
+        gap: 30px;
+    }
+    footer .logo {
+        font-family: Shrikhand;
+    }
+    footer .liens {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    footer .liens a i {
+        padding-right:6px ;
+    }
+    .liens a {
+        color: white;
+    }
+    .liens--a {
+        padding-right: 20px;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------/*
+
+/* devices -> (laptop, 1024px) */
+@media (min-width: 1024px ) {
+    header{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 200px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+    .logo-icon #logo{
+        display: flex;
+        text-align: center;
+        width: 19%;
+        margin:auto;
+        padding: 30px 0 30px 0;
+    }
+    .location {
+        width: 100%;
+        background: var(--Grey-2, #EAEAEA);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-top: auto;
+        gap: 17px;
+        color: var(--Grey, #353535);
+    }
+    .location .fa-solid {
+        color: var(--Grey, #353535);
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .location p {
+        font-weight: bold;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 3px 0 30px 0px;
+
+        /*Background*/
+        background: var(--Background, #F6F6F6);
+    }
+    .hero h1{
+        margin-top: 30px;
+        margin-bottom:18px; 
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .hero h3 {
+        margin-bottom: 18px;
+        color: var(--Grey, #353535);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: n1;
+    }
+    .hero #Boutton {
+        text-decoration: none;
+        padding: 13px 18.75px 13px 18.75px;
+        height: 50px;
+        border-radius: 25px;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        color: white;
+
+        /* Shadow/Button */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    .hero #Boutton:hover {
+        background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
+    }
+    .Boutton-box {
+        margin-top: 18px;
+        margin-bottom: 30px;
+    } 
+
+    .Fonctionnement {
+        margin-bottom: 50px;
+        padding: 0 180px 0 180px;
+    }
+    .Fonctionnement h2 {
+        padding-left: 20px;
+    }
+    .desktop-line {
+        display: flex;
+
+        padding-left: 20px;
+    }
+    .Boutton {
+        display: flex;
+        gap: 30px;
+    }
+    .Boutton .fa-solid {
+        color: #7E7E7E;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 5px;
+    }
+    .Boutton h3 {
+        font-weight: 549;
+    }
+    .Fonctionnement article {
+        display: flex;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
+    .circle {
+        margin-top: auto;
+        margin-bottom: auto;
+        border: solid 1px #9356DC;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 100%;
+        padding: 0 5px 0 5px;
+        line-height: normal;
+
+        position: relative;
+        right: 10px;
+    }
+    .fa-solid.fa-store.fa-lg {
+        color: #9356DC;
+    }
+
+    /***** Restaurants *****/
+    .Restaurants {
+        max-width: 100%;
+        background-color: #F6F6F6;
+        padding: 15px 0px;
+    }
+    .desktop-line {
+        display: flex;
+        padding-left: 20px;
+    }
+    .Restaurants h2 {
+        padding-left: 20px;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .article-restaurant {
+        width: 49%;
+        height: 341px;
+    }
+    .Restaurants img {
+        width: 100%;
+        height: 230px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    .restaurant-cards {
+        background-color: white;
+        border-radius: 20px 20px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .article-restaurant a {
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-cards h3,p  {
+        margin-left: 15px;
+        line-height: 10px;
+    }
+    .empty-heart{
+        position: relative;
+        left: 85%;
+        bottom: 50px;
+    }
+    .Badge {
+        position: relative;
+        width: 8%;
+        height: 30px;
+        background-color:rgba(153, 226, 208, 1) ;
+        border-radius: 2px;
+        line-height: 1px;
+    }
+    .Badge--1{
+        position: absolute;
+        top: 760px;
+        left: 39%;
+    }
+    .Badge--2{
+        position: absolute;
+        top: 760px;
+        left:88%;
+    }
+    .Badge--p {
+        margin-top: auto;
+        margin-left: 0px;
+        padding-top: 10px;
+        text-align: center;
+        color: var(--Green-Font, #008766);;
+    }
+    /***** Footer*****/
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: #353535;
+        color: white;
+        padding: 22px 25px;
+        gap: 30px;
+    }
+    footer .logo {
+        font-family: Shrikhand;
+    }
+    footer .liens {
+        display: flex;
+        gap: 6px;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    footer .liens a i {
+        padding-right:6px ;
+    }
+    .liens a {
+        color: white;
+    }
+    .liens--a {
+        padding-right: 20px;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------/*
+
+/* devices -> (desktop, 1440px) */
 @media (min-width: 1440px ) {
     header{
         display: flex;
@@ -377,21 +1059,23 @@ a {
 
 
     /***** Restaurants *****/
+   
     .Restaurants {
         max-width: 100%;
         background-color: #F6F6F6;
-        padding:15px 180px 0 180px;
     }
     .Restaurants h2 {
-        padding-left: 20px;
+        padding-left:200px;
     }
     .cards-container {
         display: flex;
-        gap: 100px;
+        gap: 50px;
         margin-top: 30px;
+        padding-left: 200px;
+        
     }
     .article-restaurant {
-        width: 100%;
+        width: 40%;
         height: 341px;
     }
     .Restaurants img {
@@ -415,11 +1099,10 @@ a {
         margin-left: 15px;
         line-height: 10px;
     }
-    .fa-heart {
-        position: relative;
-        left: 85%; 
-        bottom: 50px;
-    }
+    
+
+    
+    
     .Badge {
         position: relative;
         width: 8%;
@@ -430,13 +1113,13 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 690px;
+        top: 740px;
         left: 38%;
     }
     .Badge--2{
         position: absolute;
-        top: 690px;
-        left:78.5%;
+        top: 740px;
+        left:76%;
     }
     .Badge--p {
         margin-top: auto;
@@ -446,6 +1129,7 @@ a {
         color: var(--Green-Font, #008766);;
         
     }
+    
 
 
     /***** Footer*****/
@@ -475,5 +1159,26 @@ a {
     .liens--a {
         padding-right: 20px;
     }
+
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* devices -> (desktop, 2560px) */
+@media (min-width: 2560px) {
+    .Restaurants{
+        padding: 15px 0px;
+        
+    }
+    .Badge--1{
+        position: absolute;
+        top: 770px;
+        left: 33%;
+    }
+    .Badge--2{
+        position: absolute;
+        top: 770px;
+        left:72%;
+    }
+    
 
 }
