@@ -1,0 +1,56 @@
+.Restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+
+    h2{
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        a{
+            color: black;
+        }
+
+        .article-restaurant{
+            width: 90%;
+            @include centrage;
+            @include card-rounded;
+            background-color: white;
+            margin-bottom: 50px;
+
+            img {
+                width: 100%;
+                height: 231px;
+                object-fit: cover;
+                @include img-rounded;
+            }
+            
+
+            .Badge--p{
+                @include badge;
+                text-align: center;
+                @include badge-rounded;
+                &--hidden{
+                    visibility: hidden;
+                    padding: 12px;
+                }
+            }
+
+            .txt-cards{
+                line-height: 16px;
+                padding: 0 0 0 12px;
+            }
+
+            .cards-like{
+                position: relative;
+                width: 20%;
+                bottom: 80px;
+                left: 80%;
+            }
+        }
+    }
+}

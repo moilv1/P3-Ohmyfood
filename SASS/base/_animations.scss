@@ -1,0 +1,26 @@
+.empty-heart{
+    position: absolute;
+    visibility: visible;
+    transform: scale(1);
+    transition: transform 500ms;
+    &:active{
+        visibility: hidden;
+        cursor: pointer;
+    }
+}
+.anim-heart{
+    position: absolute;
+    color: $heart;
+    opacity: 0;
+    &:active{
+        transform: scale(1.1);
+        visibility: visible;
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.Boutton-box:hover{   
+    filter: sepia(25%);
+    -webkit-filter: brightness(105%);
+}

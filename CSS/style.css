@@ -1,44 +1,46 @@
 * {
     font-family: Roboto;
 }
-main {
-    width: 100%;
+body {
+    margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
 }
 
+/***************************************************************************************************************/
 
 /*  devices -> (mobils, less/equal than 425px) */
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
 
+    body {
+        width: 100%;
+    }
     /***** Header *****/
-    header {
+
+    .header {
+        width: 97%;
         display: flex;
         flex-direction: column;
-        max-width: 100%;
-        max-height: 200px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    #logo{
+    .header__logo{
         display: flex;
-        text-align: center;
         width: 60%;
         margin:auto;
-        padding: 30px 0 30px 0;
     }
-    
-    .location {
+    .header__location {
         width: 100%;
         background: var(--Grey-2, #EAEAEA);
         display: flex;
         justify-content: center;
     }
-    .location p {
+    .header__location p {
         font-weight: bold;
         color: var(--Grey, #353535);;
     }
-    .location .fa-solid {
+    .header__location .fa-solid {
         color: var(--Grey, #353535);
         text-align: center;
         margin-top: auto;
@@ -49,6 +51,7 @@ a {
     /***** hero *****/
 
     .hero{
+        width: 97%;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -73,7 +76,7 @@ a {
         font-size: 18px;
         font-weight: 300;
     }
-    .hero #Boutton {
+    .hero__button {
         text-decoration: none;
         padding: 13px 18.75px 13px 18.75px;
         height: 50px;
@@ -84,35 +87,32 @@ a {
         /* Shadow/Button */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
-    .hero #Boutton:hover {
+    .hero__button:hover {
         background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
-    }
-    .Boutton-box {
-        margin-top: 18px;
-        margin-bottom: 30px;
     }
 
     /***** Fonctionnement *****/
+
     .Fonctionnement {
         margin-bottom: 100px;
     }
     .Fonctionnement h2 {
         padding-left: 20px;
     }
-    .Boutton {
+    .Fonctionnement__Boutton {
         display: flex;
         gap: 30px;
     }
-    .Boutton .fa-solid {
+    .Fonctionnement__Boutton .fa-solid {
         color: #7E7E7E;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 5px;
     }
-    .Boutton h3 {
+    .Fonctionnement__Boutton h3 {
         font-weight: 549;
     }
-    .Fonctionnement article {
+    .Fonctionnement__card {
         display: flex;
         width: 90%;
         margin-left: auto;
@@ -121,7 +121,7 @@ a {
         border-radius: 20px;
         margin-bottom: 20px;
     }
-    .circle {
+    .Fonctionnement__circle {
         margin-top: auto;
         margin-bottom: auto;
         border: solid 1px #9356DC;
@@ -134,50 +134,52 @@ a {
         position: relative;
         right: 10px;
     }
-    .fa-solid.fa-store.fa-lg {
+    .Fonctionnement__Boutton .fa-store {
         color: #9356DC;
     }
 
     /***** Restaurants *****/
+
     .Restaurants {
+        width: 97%;
         background-color: #F6F6F6;
-        width: 100%;
         padding-top: 30px;
     }
     .Restaurants h2 {
         padding-left: 20px;
         padding-bottom: 20px;
     }
-    .cards-container {
+    .Restaurants__cards__container{
         display: flex;
         flex-direction: column;
     }
-    .article-restaurant {
+    .Restaurants__article {
         width: 95%;
         height: 341px;
     }
-    .Restaurants img {
+    .Restaurants__image {
         width: 100%;
         height: 230px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
     }
-    .restaurant-cards {
+    .Restaurants__cards {
         background-color: white;
         border-radius: 20px 20px;
         margin-left: 15px;
         margin-bottom: 30px;
+        padding-bottom: 5px;
         flex-direction: column;
     }
-    .article-restaurant a {
+    .Restaurants__article a {
         text-decoration: none;
         color: black;
     }
-    .restaurant-cards h3,p  {
+    .Restaurants__cards h3 , p  {
         margin-left: 15px;
         line-height: 10px;
     }
-    .Badge {
+    .Restaurants__Badge {
         position: relative;
         width: 25%;
         height: 30px;
@@ -187,61 +189,87 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 1040px;
+        top: 990px;
         left: 65%;
     }
     .Badge--2{
         position: absolute;
-        top: 1380px;
+        top: 1330px;
         left: 65%;
-        
     }
-    .Badge--p {
+    .Restaurants__Badge--p {
         margin-top: auto;
         margin-left: 0px;
         padding-top: 10px;
         margin-bottom: auto;
         text-align: center;
         color: var(--Green-Font, #008766);;
-        
     }
+    .Restaurants__cards__like {
+        position: relative;
+        left: 85%;
+        bottom: 50px;
+    }
+    .empty-heart{
+        position: absolute;
+        visibility: visible;
+        transform: scale(1);
+        transition:  transform 500ms;
+        &:hover {
+         visibility: hidden;
+         cursor: pointer;
+        }
+     }
+     .anim-heart {
+         position: absolute;
+         color: #9356DC;
+         opacity: 0;
+         &:hover{
+             transform: scale(1.1);
+             visibility: visible;
+             opacity: 1;
+         }
+     }
+
     /***** Footer*****/
-    footer {
+
+    .footer {
         display: flex;
         flex-direction: column;
         background-color: #353535;
         color: white;
         padding: 22px 25px;
     }
-    footer .logo {
+    .footer__logo {
         font-family: Shrikhand;
     }
-    footer .liens {
+    .footer__link {
         display: flex;
         flex-direction: column;
         gap: 6px;
     }
-    footer .liens a i {
+    .footer__link a i {
         padding-right:6px ;
     }
-    .liens a {
+    .footer__link a {
         color: white;
     }
 }
 
 /*------------------------------------------------------------------*/
+
 /* devices -> ( mobils, more than 425.9px)*/
-@media (min-width: 425.9px ) {
+@media (min-width: 425.1px ) {
 
     /***** Header *****/
-    header {
+    .header {
         display: flex;
         flex-direction: column;
         max-width: 100%;
         max-height: 200px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    #logo{
+    .header__logo{
         display: flex;
         text-align: center;
         width: 60%;
@@ -249,17 +277,17 @@ a {
         padding: 30px 0 30px 0;
     }
     
-    .location {
+    .header__location {
         width: 100%;
         background: var(--Grey-2, #EAEAEA);
         display: flex;
         justify-content: center;
     }
-    .location p {
+    .header__location p {
         font-weight: bold;
         color: var(--Grey, #353535);;
     }
-    .location .fa-solid {
+    .header__location .fa-solid {
         color: var(--Grey, #353535);
         text-align: center;
         margin-top: auto;
@@ -294,7 +322,7 @@ a {
         font-size: 18px;
         font-weight: 300;
     }
-    .hero #Boutton {
+    .hero__button {
         text-decoration: none;
         padding: 13px 18.75px 13px 18.75px;
         height: 50px;
@@ -305,12 +333,8 @@ a {
         /* Shadow/Button */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
-    .hero #Boutton:hover {
+    .hero__button:hover {
         background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
-    }
-    .Boutton-box {
-        margin-top: 18px;
-        margin-bottom: 30px;
     }
 
     /***** Fonctionnement *****/
@@ -320,20 +344,20 @@ a {
     .Fonctionnement h2 {
         padding-left: 20px;
     }
-    .Boutton {
+    .Fonctionnement__Boutton {
         display: flex;
         gap: 30px;
     }
-    .Boutton .fa-solid {
+    .Fonctionnement__Boutton .fa-solid {
         color: #7E7E7E;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 5px;
     }
-    .Boutton h3 {
+    .Fonctionnement__Boutton h3 {
         font-weight: 549;
     }
-    .Fonctionnement article {
+    .Fonctionnement__card {
         display: flex;
         width: 90%;
         margin-left: auto;
@@ -342,7 +366,7 @@ a {
         border-radius: 20px;
         margin-bottom: 20px;
     }
-    .circle {
+    .Fonctionnement__circle {
         margin-top: auto;
         margin-bottom: auto;
         border: solid 1px #9356DC;
@@ -355,7 +379,7 @@ a {
         position: relative;
         right: 10px;
     }
-    .fa-solid.fa-store.fa-lg {
+    .Fonctionnement__Boutton .fa-store {
         color: #9356DC;
     }
 
@@ -369,36 +393,36 @@ a {
         padding-left: 20px;
         padding-bottom: 20px;
     }
-    .cards-container {
+    .Restaurants__cards__container {
         display: flex;
         flex-direction: column;
     }
-    .article-restaurant {
+    .Restaurants__article {
         width: 95%;
         height: 341px;
     }
-    .Restaurants img {
+    .Restaurants__image {
         width: 100%;
         height: 230px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
     }
-    .restaurant-cards {
+    .Restaurants__cards {
         background-color: white;
         border-radius: 20px 20px;
         margin-left: 15px;
-        margin-bottom: 30px;
+        padding-bottom: 5px;
         flex-direction: column;
     }
-    .article-restaurant a {
+    .Restaurants__article a {
         text-decoration: none;
         color: black;
     }
-    .restaurant-cards h3,p  {
+    .Restaurants__cards h3,p  {
         margin-left: 15px;
         line-height: 10px;
     }
-    .Badge {
+    .Restaurants__Badge {
         position: relative;
         width: 25%;
         height: 30px;
@@ -408,68 +432,92 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 1040px;
+        top: 990px;
         left: 65%;
     }
     .Badge--2{
         position: absolute;
-        top: 1380px;
+        top: 1330px;
         left: 65%;
-        
     }
-    .Badge--p {
+    .Restaurants__Badge--p {
         margin-top: auto;
         margin-left: 0px;
         padding-top: 10px;
         margin-bottom: auto;
         text-align: center;
         color: var(--Green-Font, #008766);;
-        
     }
+    .Restaurants__cards__like {
+        position: relative;
+        left: 85%;
+        bottom: 50px;
+    }
+    .empty-heart{
+        position: absolute;
+        visibility: visible;
+        transform: scale(1);
+        transition:  transform 500ms;
+        &:active {
+         visibility: hidden;
+         cursor: pointer;
+        }
+     }
+     .anim-heart {
+         position: absolute;
+         color: #9356DC;
+         opacity: 0;
+         &:active{
+             transform: scale(1.1);
+             visibility: visible;
+             opacity: 1;
+         }
+     }
+
     /***** Footer*****/
-    footer {
+
+    .footer {
         display: flex;
         flex-direction: column;
         background-color: #353535;
         color: white;
         padding: 22px 25px;
     }
-    footer .logo {
+    .footer__logo {
         font-family: Shrikhand;
     }
-    footer .liens {
+    .footer__link {
         display: flex;
         flex-direction: column;
         gap: 6px;
     }
-    footer .liens a i {
+    .footer__link a i {
         padding-right:6px ;
     }
-    .liens a {
+    .footer__link a {
         color: white;
     }
-
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------/*
 
-/* devices -> (desktop, 768px) */
+/* devices -> (tablet, 768px) */
 @media (min-width: 768px ) {
-    header{
+    .header{
         display: flex;
         flex-direction: column;
         max-width: 100%;
         max-height: 200px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    .logo-icon #logo{
+    .header__logo {
         display: flex;
         text-align: center;
         width: 25%;
         margin:auto;
         padding: 30px 0 30px 0;
     }
-    .location {
+    .header__location {
         width: 100%;
         background: var(--Grey-2, #EAEAEA);
         display: flex;
@@ -479,13 +527,13 @@ a {
         gap: 17px;
         color: var(--Grey, #353535);
     }
-    .location .fa-solid {
+    .header__location .fa-solid {
         color: var(--Grey, #353535);
         text-align: center;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .location p {
+    .header__location p {
         font-weight: bold;
     }
     .hero{
@@ -513,7 +561,7 @@ a {
         font-weight: 300;
         line-height: n1;
     }
-    .hero #Boutton {
+    .hero__button {
         text-decoration: none;
         padding: 13px 18.75px 13px 18.75px;
         height: 50px;
@@ -524,47 +572,41 @@ a {
         /* Shadow/Button */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
-    .hero #Boutton:hover {
+    .hero__button:hover {
         background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
     }
-    .Boutton-box {
-        margin-top: 18px;
-        margin-bottom: 30px;
-    } 
+
+    /***Fonctionnement***/
 
     .Fonctionnement {
         margin-bottom: 50px;
-        padding: 0 0px 0 0px;
+        padding: 0px 0px 0px 0px;
     }
     .Fonctionnement h2 {
         padding-left: 20px;
     }
-    .desktop-line {
-        display: flex;
-        padding-left: 20px;
-    }
-    .Boutton {
+    .Fonctionnement__Boutton {
         display: flex;
         gap: 35px;
     }
-    .Boutton .fa-solid {
+    .Fonctionnement__Boutton .fa-solid {
         color: #7E7E7E;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 15px;
     }
-    .Boutton h3 {
+    .Fonctionnement__Boutton h3 {
         font-weight: 549;
     }
-    .Fonctionnement article {
+    .Fonctionnement__card {
         display: flex;
-        width: 150%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
     }
-    .circle {
+    .Fonctionnement__circle {
         margin-top: auto;
         margin-bottom: auto;
         border: solid 1px #9356DC;
@@ -577,11 +619,12 @@ a {
         position: relative;
         right: 10px;
     }
-    .fa-solid.fa-store.fa-lg {
+    .Fonctionnement__Boutton .fa-store {
         color: #9356DC;
     }
 
     /***** Restaurants *****/
+
     .Restaurants {
         max-width: 100%;
         background-color: #F6F6F6;
@@ -590,38 +633,63 @@ a {
     .Restaurants h2 {
         padding-left: 20px;
     }
-    .cards-container {
+    .Restaurants__cards__container {
         display: flex;
         gap: 10px;
         margin-top: 30px;
     }
-    .article-restaurant {
+    .Restaurants__article {
         width: 98%;
         height: 341px;
     }
-    .Restaurants img {
+    .Restaurants__image {
         width: 100%;
         height: 230px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
     }
-    .restaurant-cards {
+    .Restaurants__cards {
         background-color: white;
         border-radius: 20px 20px;
         margin-left: 15px;
-        margin-bottom: 30px;
+        padding-bottom: 5px;
         flex-direction: column;
     }
-    .article-restaurant a {
+    .Restaurants__article a {
         text-decoration: none;
         color: black;
     }
-    .restaurant-cards h3,p  {
+    .Restaurants__cards h3,p  {
         margin-left: 15px;
         line-height: 10px;
     }
+    .Restaurants__cards__like {
+        position: relative;
+        left: 85%;
+        bottom: 50px;
+    }
+    .Restaurants__cards__like .empty-heart{
+        position: absolute;
+        visibility: visible;
+        transform: scale(1);
+        transition:  transform 500ms;
+        &:active {
+         visibility: hidden;
+         cursor: pointer;
+        }
+     }
+     .Restaurants__cards__like .anim-heart {
+         position: absolute;
+         color: #9356DC;
+         opacity: 0;
+         &:active{
+             transform: scale(1.1);
+             visibility: visible;
+             opacity: 1;
+         }
+     }
     
-    .Badge {
+    .Restaurants__Badge {
         position: relative;
         width: 20%;
         height: 30px;
@@ -631,70 +699,72 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 760px;
-        left: 70%;
+        top: 830px;
+        left: 75%;
     }
     .Badge--2{
         position: absolute;
-        top:1110px;
-        left:70%;
+        top:1180px;
+        left:75%;
     }
-    .Badge--p {
+    .Restaurants__Badge--p {
         margin-top: auto;
         margin-left: 0px;
         padding-top: 10px;
         text-align: center;
         color: var(--Green-Font, #008766);;
     }
-    /***** Footer*****/
-    footer {
+
+    /***** Footer
+
+    .footer {
+        width: 10px;
         display: flex;
         flex-direction: row-reverse;
         background-color: #353535;
         color: white;
-        padding: 22px 25px;
-        gap: 30px;
     }
-    footer .logo {
+    .footer__logo{
         font-family: Shrikhand;
     }
-    footer .liens {
+    .footer__link {
         display: flex;
         flex-direction: row;
         gap: 6px;
         margin-bottom: auto;
         margin-top: auto;
     }
-    footer .liens a i {
+    .footer__link a i {
         padding-right:6px ;
     }
-    .liens a {
+    .footer__link a {
         color: white;
     }
-    .liens--a {
+    .footer__link {
         padding-right: 20px;
     }
+    *****/
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------/*
 
 /* devices -> (laptop, 1024px) */
 @media (min-width: 1024px ) {
-    header{
+    .header{
         display: flex;
         flex-direction: column;
         max-width: 100%;
         max-height: 200px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    .logo-icon #logo{
+    .header__logo{
         display: flex;
         text-align: center;
         width: 19%;
         margin:auto;
         padding: 30px 0 30px 0;
     }
-    .location {
+    .header__location {
         width: 100%;
         background: var(--Grey-2, #EAEAEA);
         display: flex;
@@ -704,15 +774,19 @@ a {
         gap: 17px;
         color: var(--Grey, #353535);
     }
-    .location .fa-solid {
+    .header__location .fa-solid {
         color: var(--Grey, #353535);
         text-align: center;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .location p {
+    .header__location > p {
         font-weight: bold;
+        padding: 0 0 0 0;
     }
+
+    /*** hero ***/
+    
     .hero{
         display: flex;
         flex-direction: column;
@@ -738,7 +812,7 @@ a {
         font-weight: 300;
         line-height: n1;
     }
-    .hero #Boutton {
+    .hero__button {
         text-decoration: none;
         padding: 13px 18.75px 13px 18.75px;
         height: 50px;
@@ -749,40 +823,37 @@ a {
         /* Shadow/Button */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
-    .hero #Boutton:hover {
+    .hero__button:hover {
         background: var(--Button-Gradient, linear-gradient(#9356DC, #FF79DA)) ;
     }
-    .Boutton-box {
-        margin-top: 18px;
-        margin-bottom: 30px;
-    } 
+    
+    /**** Fonctionnement *****/
 
     .Fonctionnement {
         margin-bottom: 50px;
-        padding: 0 180px 0 180px;
+        padding: 0px 0px 0px 0px;
+    }
+    .desktop-line {
+        display: flex;
+        gap: 30px;
     }
     .Fonctionnement h2 {
         padding-left: 20px;
     }
-    .desktop-line {
-        display: flex;
-
-        padding-left: 20px;
-    }
-    .Boutton {
+    .Fonctionnement__Boutton {
         display: flex;
         gap: 30px;
     }
-    .Boutton .fa-solid {
+    .Fonctionnement__Boutton .fa-solid {
         color: #7E7E7E;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 5px;
     }
-    .Boutton h3 {
+    .Fonctionnement__Boutton h3 {
         font-weight: 549;
     }
-    .Fonctionnement article {
+    .Fonctionnement__card{
         display: flex;
         width: 30%;
         margin-left: auto;
@@ -790,7 +861,7 @@ a {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
     }
-    .circle {
+    .Fonctionnement__circle {
         margin-top: auto;
         margin-bottom: auto;
         border: solid 1px #9356DC;
@@ -803,62 +874,59 @@ a {
         position: relative;
         right: 10px;
     }
-    .fa-solid.fa-store.fa-lg {
+    .Fonctionnement__Boutton .fa-store {
         color: #9356DC;
     }
 
     /***** Restaurants *****/
+
     .Restaurants {
         max-width: 100%;
         background-color: #F6F6F6;
         padding: 15px 0px;
     }
-    .desktop-line {
-        display: flex;
-        padding-left: 20px;
-    }
     .Restaurants h2 {
         padding-left: 20px;
     }
-    .cards-container {
+    .Restaurants__cards__container {
         display: flex;
         flex-direction: row;
         gap: 10px;
         margin-top: 30px;
     }
-    .article-restaurant {
+    .Restaurants__article {
         width: 49%;
         height: 341px;
     }
-    .Restaurants img {
+    .Restaurants__image {
         width: 100%;
         height: 230px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
     }
-    .restaurant-cards {
+    .Restaurants__cards {
         background-color: white;
         border-radius: 20px 20px;
         margin-left: 15px;
-        margin-bottom: 30px;
+        padding-bottom: 5px;
         flex-direction: column;
     }
-    .article-restaurant a {
+    .Restaurants__article a {
         text-decoration: none;
         color: black;
     }
-    .restaurant-cards h3,p  {
+    .Restaurants__cards h3,p  {
         margin-left: 15px;
         line-height: 10px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
     }
     
-    .card_like {
+    .Restaurants__cards__like {
         position: relative;
         left: 85%;
         bottom: 50px;
     }
-    .empty-heart{
+    .Restaurants__cards__like .empty-heart{
        position: absolute;
        visibility: visible;
        transform: scale(1);
@@ -868,7 +936,7 @@ a {
         cursor: pointer;
        }
     }
-    .anim-heart {
+    .Restaurants__cards__like .anim-heart {
         position: absolute;
         color: #9356DC;
         opacity: 0;
@@ -878,7 +946,7 @@ a {
             opacity: 1;
         }
     }
-    .Badge {
+    .Restaurants__Badge {
         position: relative;
         width: 8%;
         height: 30px;
@@ -888,22 +956,24 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 760px;
+        top: 700px;
         left: 39%;
     }
     .Badge--2{
         position: absolute;
-        top: 760px;
+        top: 700px;
         left:88%;
     }
-    .Badge--p {
+    .Restaurants__Badge--p {
         margin-top: auto;
         margin-left: 0px;
         padding-top: 10px;
         text-align: center;
         color: var(--Green-Font, #008766);;
     }
+
     /***** Footer*****/
+
     footer {
         display: flex;
         flex-direction: row-reverse;
@@ -936,21 +1006,21 @@ a {
 
 /* devices -> (desktop, 1440px) */
 @media (min-width: 1440px ) {
-    header{
+    .header{
         display: flex;
         flex-direction: column;
         max-width: 100%;
         max-height: 200px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    .logo-icon #logo{
+    .header__logo{
         display: flex;
         text-align: center;
         width: 13%;
         margin:auto;
         padding: 30px 0 30px 0;
     }
-    .location {
+    .header__location {
         width: 100%;
         background: var(--Grey-2, #EAEAEA);
         display: flex;
@@ -960,15 +1030,18 @@ a {
         gap: 17px;
         color: var(--Grey, #353535);
     }
-    .location .fa-solid {
+    .header__location .fa-solid {
         color: var(--Grey, #353535);
         text-align: center;
         margin-top: auto;
         margin-bottom: auto;
     }
-    .location p {
+    .header__location > p {
         font-weight: bold;
     }
+
+    /*** hero ***/
+
     .hero{
         display: flex;
         flex-direction: column;
@@ -994,7 +1067,7 @@ a {
         font-weight: 300;
         line-height: n1;
     }
-    .hero #Boutton {
+    .hero__button {
         text-decoration: none;
         padding: 13px 18.75px 13px 18.75px;
         height: 50px;
@@ -1005,15 +1078,12 @@ a {
         /* Shadow/Button */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
-    .hero #Boutton:hover {
+    .hero__button:hover {
         background: var(--Button-Gradient, linear-gradient( #9356DC, #FF79DA)) ;
         padding: 18px 22px 18px 22px;
     }
-    .Boutton-box {
-        margin-top: 18px;
-        margin-bottom: 30px;
-    } 
-
+    
+    /***** Fonctionnement *****/
 
     .Fonctionnement {
         margin-bottom: 50px;
@@ -1022,24 +1092,21 @@ a {
     .Fonctionnement h2 {
         padding-left: 20px;
     }
-    .desktop-line {
-        display: flex;
-        padding-left: 20px;
-    }
-    .Boutton {
+   
+    .Fonctionnement__Boutton {
         display: flex;
         gap: 30px;
     }
-    .Boutton .fa-solid {
+    .Fonctionnement__Boutton .fa-solid {
         color: #7E7E7E;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 5px;
     }
-    .Boutton h3 {
+    .Fonctionnement__Boutton h3 {
         font-weight: 549;
     }
-    .Fonctionnement article {
+    .Fonctionnement__card {
         display: flex;
         width: 30%;
         margin-left: auto;
@@ -1047,7 +1114,7 @@ a {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
     }
-    .circle {
+    .Fonctionnement__circle {
         margin-top: auto;
         margin-bottom: auto;
         border: solid 1px #9356DC;
@@ -1060,7 +1127,7 @@ a {
         position: relative;
         right: 10px;
     }
-    .fa-solid.fa-store.fa-lg {
+    .Fonctionnement__Boutton .fa-store {
         color: #9356DC;
     }
 
@@ -1068,50 +1135,43 @@ a {
     /***** Restaurants *****/
    
     .Restaurants {
-        max-width: 100%;
         background-color: #F6F6F6;
     }
     .Restaurants h2 {
         padding-left:200px;
     }
-    .cards-container {
+    .Restaurants__cards__container {
         display: flex;
         gap: 50px;
         margin-top: 30px;
         padding-left: 200px;
-        
     }
-    .article-restaurant {
+    .Restaurants__article {
         width: 40%;
         height: 341px;
     }
-    .Restaurants img {
+    .Restaurants__image {
         width: 100%;
         height: 230px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
     }
-    .restaurant-cards {
+    .Restaurants__cards {
         background-color: white;
         border-radius: 20px 20px;
         margin-left: 15px;
-        margin-bottom: 30px;
+        padding-bottom: 5px;
         flex-direction: column;
     }
-    .article-restaurant a {
+    .Restaurants__article a {
         text-decoration: none;
         color: black;
     }
-    .restaurant-cards h3,p  {
+    .Restaurants__cards h3,p  {
         margin-left: 15px;
         line-height: 10px;
     }
-    
-     
-
-    
-    
-    .Badge {
+    .Restaurants__Badge {
         position: relative;
         width: 8%;
         height: 30px;
@@ -1121,71 +1181,95 @@ a {
     }
     .Badge--1{
         position: absolute;
-        top: 740px;
+        top: 700px;
         left: 38%;
     }
     .Badge--2{
         position: absolute;
-        top: 740px;
+        top: 700px;
         left:76%;
     }
-    .Badge--p {
+    .Restaurants__Badge--p {
         margin-top: auto;
         margin-left: 0px;
         padding-top: 10px;
         text-align: center;
         color: var(--Green-Font, #008766);;
     }
-    
-
-
-    /***** Footer*****/
-    footer {
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: #353535;
-        color: white;
-        padding: 22px 25px;
-        gap: 30px;
+    .Restaurants__cards__like {
+        position: relative;
+        left: 85%;
+        bottom: 50px;
     }
-    footer .logo {
-        font-family: Shrikhand;
+    .Restaurants__cards__like .empty-heart{
+       position: absolute;
+       visibility: visible;
+       transform: scale(1);
+       transition:  transform 500ms;
+       &:active {
+        visibility: hidden;
+        cursor: pointer;
+       }
     }
-    footer .liens {
-        display: flex;
-        gap: 6px;
-        margin-bottom: auto;
-        margin-top: auto;
+    .Restaurants__cards__like .anim-heart {
+        position: absolute;
+        color: #9356DC;
+        opacity: 0;
+        &:active{
+            transform: scale(1.1);
+            visibility: visible;
+            opacity: 1;
+        }
     }
-    footer .liens a i {
-        padding-right:6px ;
-    }
-    .liens a {
-        color: white;
-    }
-    .liens--a {
-        padding-right: 20px;
-    }
-
 }
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* devices -> (desktop, 2560px) */
 @media (min-width: 2560px) {
     .Restaurants{
-        padding: 15px 0px;
-        
+        padding: 15px 0px; 
+    }
+    .Restaurants__cards__container{
+        width: 100%;
+        padding: 0 180px 0 180px;
     }
     .Badge--1{
         position: absolute;
-        top: 770px;
-        left: 33%;
+        top: 720px;
+        left: 35%;
     }
     .Badge--2{
         position: absolute;
-        top: 770px;
-        left:72%;
+        top: 720px;
+        left:73.6%;
     }
+    .Restaurants__cards__like {
+        position: relative;
+        left: 85%;
+        bottom: 50px;
+    }
+    .Restaurants__cards__like .empty-heart{
+       position: absolute;
+       visibility: visible;
+       transform: scale(1);
+       transition:  transform 500ms;
+       &:active {
+        visibility: hidden;
+        cursor: pointer;
+       }
+    }
+    .Restaurants__cards__like .anim-heart {
+        position: absolute;
+        color: #9356DC;
+        opacity: 0;
+        &:active{
+            transform: scale(1.1);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
     
 
 }

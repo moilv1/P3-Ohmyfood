@@ -1,0 +1,9 @@
+.Boutton-box {
+    background: $hero__button;
+    @include button-rounded;
+    @include centrage;
+    @include shadow;
+    border: solid $hero__button;
+    padding: 13px 18px;
+    width: 50%;
+}

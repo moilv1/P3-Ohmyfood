@@ -1,0 +1,37 @@
+.Fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    margin-bottom: 30px;
+    
+    h2{
+        padding-left: 10px;
+    }
+    
+    .fonctionnement-textes{
+        flex-direction: column;
+
+        .fonctionnement-texte{
+            display: flex;
+            gap: 20px;
+            border: solid $background-color ;
+            @include button-rounded;
+            background-color: $background-color;
+            margin:20px ;
+
+            .numero-fonctionnement{
+                @include centrage_hauteur;
+                @include button-circle;
+            }
+
+            .fa-solid{
+                @include centrage_hauteur ;
+                color: $gey-tint;
+                &.fa-store{
+                    color: $circle-color;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color:$footer-grey;
+    color: white;
+    padding: 10px 0px 10px 15px;
+
+    .footer__link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .fa-solid {
+            padding-right: 8px;
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
