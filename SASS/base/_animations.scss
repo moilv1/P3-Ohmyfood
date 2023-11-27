@@ -1,9 +1,10 @@
+/* animation like */
 .empty-heart{
     position: absolute;
     visibility: visible;
     transform: scale(1);
     transition: transform 500ms;
-    &:active{
+    &:hover{
         visibility: hidden;
         cursor: pointer;
     }
@@ -12,7 +13,7 @@
     position: absolute;
     color: $heart;
     opacity: 0;
-    &:active{
+    &:hover{
         transform: scale(1.1);
         visibility: visible;
         cursor: pointer;
@@ -20,7 +21,162 @@
     }
 }
 
+
+
+
+/* Animation bouton "commander" et "explorer nos restaurants" */ 
 .Boutton-box:hover{   
     filter: sepia(25%);
-    -webkit-filter: brightness(105%);
+    -webkit-filter: brightness(110%);
 }
+.Boutton-commande:hover{
+    filter: sepia(25%);
+    -webkit-filter: brightness(110%);
+}
+
+
+
+
+
+/* Animation icon fonctionnement */ 
+.Fonctionnement{
+    .fonctionnement-textes{
+        .fonctionnement-texte{
+            &:hover{
+                .fa-solid{
+                    color: $circle-color;
+                }
+            }
+        }
+    }
+}
+
+
+/* Animation sélection du plat/dessert/entrée */
+.card:active{
+    .box{
+        animation: select 0.3s ease-in-out;
+        
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes select {
+    0%{width: 0;}
+    
+    100%{
+        left: 0px;
+        width: 60px;
+    }
+}
+
+
+
+
+
+/* Animation du loader principal */ 
+.LoaderContainer {   
+    position: absolute;   
+    width: 100%;
+    height: 100%;
+    z-index: 99999;   
+    inset: 0;   
+    background: #353535;   
+    display: flex;   
+    flex-direction: column;   
+    justify-content: center;   
+    align-items: center;   
+    animation: hide ease-in-out 4s;
+    animation-fill-mode: forwards; 
+    opacity: 1;
+
+    span {
+        position: relative;
+        top: 15%;
+        font-size: 30px;
+        font-family: $Shrikand;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+    }
+
+    .loader {  
+        display: flex;   
+        animation: rotate 4s ; 
+
+        border: solid 15px $gey-tint;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+
+
+        border-right: solid 15px white ;
+        border-left: solid 15px white;
+    }
+}
+@keyframes rotate {   
+    25%{
+        transform: rotate(180deg);
+        
+    }
+    50%{
+        transform: rotate(-180deg);
+        
+    }
+    75%{
+        transform: rotate(180deg);
+        
+    }
+    100%{
+        transform: rotate(-360deg);
+        
+    }
+}
+@keyframes hide {
+    90%{
+        opacity: 1;
+    }
+    100% { opacity: 0; z-index: -99999;}
+}
+.body_scroll-disabled {
+    animation: disable-scroll 2s;
+  }
+@keyframes disable-scroll {
+    0% { overflow: hidden; height: 100%;} 
+    99% { overflow: hidden; height: 100%;}
+    100% { overflow: visible; height: auto;}
+}
+
+
+
+
+
+/* Animation pour le menu ( Scale )  */
+.entrées-anim{
+    
+    animation: hola 1s;
+}
+.plats-anim{
+    
+    animation: hola 1.5s;
+}
+.desserts-anim{
+    
+    animation: hola 1.7s;
+}
+
+@keyframes hola {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+

@@ -1,8 +1,9 @@
+
+
 .Restaurants {
     display: flex;
     flex-direction: column;
     background-color: $background-color;
-
     h2{
         padding-top: 15px;
         padding-left: 10px;
@@ -49,8 +50,68 @@
                 position: relative;
                 width: 20%;
                 bottom: 80px;
-                left: 80%;
+                left: 85%;
             }
         }
     }
 }
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+    #home{
+        height: 1380px;
+        margin: 0;
+        .Restaurants{
+        .cards-container{
+            flex-direction: row;
+            .article-restaurant{
+                width: 40%;
+
+                .cards-like{
+                    left: 80%;
+                }
+            }
+        }
+    }
+}}
+@media screen and (min-width:1025px) and (max-width: 1440px){
+    #home{
+        margin: 0;
+        .Restaurants{
+            padding: 0 120px 0 120px;
+    
+            .cards-container{
+                flex-direction: row;
+                padding: 0 0 20px 0;
+    
+                .article-restaurant{
+                    width: 40%;
+    
+                    .cards-like{
+                        left: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1441px){
+    .Restaurants{
+        padding: 0 120px 0 120px;
+
+        .cards-container{
+            flex-direction: row;
+            
+            .article-restaurant{
+                width: 40%;
+
+                .cards-like{
+                    left: 90%;
+                }
+                
+            }
+        }
+    }
+}
+
+

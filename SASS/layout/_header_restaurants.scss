@@ -1,0 +1,69 @@
+.restaurants{
+    display: flex;
+    flex-direction: row;
+    .header__back {
+        height: 30%;
+        padding: 0 0 0 10px;
+        @include centrage_hauteur;
+
+        & i{
+            color: black;
+        }
+
+    }
+
+    .logo__ohmyfood{
+        width: 30%;
+        @include centrage;
+        padding: 10px 0 10px 0;
+    } 
+
+}
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+
+    .restaurants{
+
+        .header__back{
+            padding: 0 0 0 10px;
+        }
+
+        .logo__ohmyfood{
+            width: 15%;
+            padding: 20px 0 20px 0;
+        } 
+
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .restaurants{
+
+        .header__back{
+            padding: 0 0 0 10px;
+        }
+
+        .logo__ohmyfood{
+            width: 13%;
+            padding: 20px 0 20px 0;
+        } 
+
+    }
+}
+
+@media screen and (min-width : 1441px) {
+    .restaurants{
+
+        .header__back{
+            height: 10%;
+            padding: 0 0 0 10px;
+        }
+
+        .logo__ohmyfood{
+            width: 10%;
+            padding: 20px 0 20px 0;
+        } 
+
+    }
+}

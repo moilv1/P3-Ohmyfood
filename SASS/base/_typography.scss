@@ -1,10 +1,24 @@
-* {
+body {
     font-family: $font-stack;
 }
+
 a {
     text-decoration: none;
 }
+.Boutton-commande{
+    a{
+        color: white;
+        line-height: normal;
+    }
+}
 
+.endpage__title{
+    & p {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 18px;
+        color: white;
+    }
+}
 
 .Boutton-box{
     

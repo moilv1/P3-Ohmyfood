@@ -1,0 +1,66 @@
+.img_restaurants{
+   
+    .img{
+        object-fit: cover;
+        max-height: 293px;
+        position: relative;
+        width: 100%;
+    }
+    
+}
+@media screen and (min-width:769px) and (max-width: 1024px){
+    .img_restaurants{
+        
+        .img{
+            max-height: 390px;
+            position: relative;
+            width: 100%;
+        }
+        .img-spé{
+            object-position: 0px -500px;
+        }
+        .img-fr{
+            object-position: 0px -170px ;
+        }
+        
+    
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1440px){
+    .img_restaurants{
+        
+        .img{
+            max-height: 450px;
+            position: relative;
+            width: 100%;
+        }
+        .img-spé{
+            object-position: 0px -780px;
+        }
+        .img-fr{
+            object-position: 0px -380px ;
+        }
+        
+    
+    }
+}
+@media screen and (min-width:1441px){
+    .img_restaurants{
+        
+        .img{
+            max-height: 450px;
+            position: relative;
+            width: 100%;
+        }
+        .img-spé{
+            object-position: 0px -1400px;
+        }
+        .img-fr{
+            object-position: 0px -780px ;
+        }
+        
+    
+    }
+}
+

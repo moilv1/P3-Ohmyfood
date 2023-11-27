@@ -4,6 +4,13 @@ footer{
     background-color:$footer-grey;
     color: white;
     padding: 10px 0px 10px 15px;
+    
+
+    .endpage__title {
+        font-family: "Shrikhand", sans-serif;
+        font-size: 18px;
+        color: #fff;
+    }
 
     .footer__link {
         display: flex;
@@ -16,5 +23,84 @@ footer{
 
     a {
         color: white;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width: 1024px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        background-color:$footer-grey;
+        color: white;
+        padding: 10px 0px 10px 15px;
+    
+        .endpage__title p {
+            font-family: "Shrikhand", sans-serif;
+            font-size: 22px;
+            color: #fff;
+        }
+    
+        .footer__link {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .fa-solid {
+                padding-right: 8px;
+            }
+        }
+    
+        a {
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    footer{
+        flex-direction: row-reverse;
+        padding: 10px 0px 10px 15px;
+    
+        .endpage__title {
+            padding: 15px 30px 0 0;
+        }
+    
+        .footer__link {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding: 35px 120px;
+            .fa-solid {
+                padding-right: 8px;
+            }
+        }
+    
+        a {
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: 1441px){
+    footer{
+        flex-direction: row-reverse;
+        padding: 10px 0px 10px 15px;
+    
+        .endpage__title {
+            padding: 15px 30px 0 0;
+        }
+    
+        .footer__link {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding: 35px 120px;
+            .fa-solid {
+                padding-right: 8px;
+            }
+        }
+    
+        a {
+            color: white;
+        }
     }
 }

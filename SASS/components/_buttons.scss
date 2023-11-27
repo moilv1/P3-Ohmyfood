@@ -7,3 +7,44 @@
     padding: 13px 18px;
     width: 50%;
 }
+
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+    .Boutton-box{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .Boutton-box{
+        width: 20%;
+    }
+}
+
+
+.Boutton-commande{
+    @include button-rounded;
+    @include centrage;
+    @include shadow;
+    background: $hero__button;
+    text-align: center;
+    background-color: $hero__button;
+    width: 60%;
+    padding: 20px 0 20px 0;
+    
+}
+
+@media screen and (min-width:1440px) {
+    .Boutton-commande{
+        @include button-rounded;
+        @include centrage;
+        @include shadow;
+        background: $hero__button;
+        text-align: center;
+        background-color: $hero__button;
+        
+        padding: 20px 0 20px 0;
+        width: 186px;
+    }
+}
+    
