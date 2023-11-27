@@ -40,18 +40,22 @@
 }
 
 /* Animation sélection du plat/dessert/entrée */
-.card:active .box {
-  animation: select 0.3s ease-in-out;
-  animation-fill-mode: forwards;
+.card:hover .box {
+  animation: select 250ms ease-in-out forwards;
 }
 
 @keyframes select {
   0% {
-    width: 0;
+    width: 10px;
   }
   100% {
     left: 0px;
     width: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card:hover .box {
+    animation: select 250ms ease-in-out forwards;
   }
 }
 /* Animation du loader principal */
@@ -151,10 +155,10 @@
 
 @keyframes hola {
   0% {
-    scale: 0;
+    -webkit-transform: scale(0);
   }
   100% {
-    scale: 1;
+    -webkit-transform: scale(1);
   }
 }
 body {
@@ -739,10 +743,16 @@ main .background .restaurant .cards .card .card-texte {
 }
 main .background .restaurant .cards .card .card-texte h3 {
   font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 main .background .restaurant .cards .card .card-texte p {
   font-size: 16px;
   margin-top: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 main .background .restaurant .cards .card .Price {
   margin-top: auto;
@@ -759,7 +769,7 @@ main .background .restaurant .cards .card .box {
   left: 350px;
 }
 main .background .restaurant .cards .card .box .fa-circle-check {
-  color: grey;
+  color: white;
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -1097,7 +1107,6 @@ main .background .restaurant .cards .card .box .fa-circle-check {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   text-align: center;
-  background-color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   width: 60%;
   padding: 20px 0 20px 0;
 }
@@ -1110,7 +1119,6 @@ main .background .restaurant .cards .card .box .fa-circle-check {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
     text-align: center;
-    background-color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
     padding: 20px 0 20px 0;
     width: 186px;
   }

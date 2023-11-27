@@ -82,10 +82,16 @@ main{
                         white-space: nowrap;
                         h3{
                             font-size: 18px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
                         }
                         p{
                             font-size: 16px;
                             margin-top: 0;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
                         }
                         
                     } 
@@ -98,7 +104,6 @@ main{
                     
                     
                     .box{
-                        
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -109,7 +114,7 @@ main{
                         
 
                         .fa-circle-check{
-                            color: grey;
+                            color: white;
                         }
                     }
                     
