@@ -4,7 +4,7 @@
   position: absolute;
   visibility: visible;
   transform: scale(1);
-  transition: transform 500ms;
+  transition: transform all 0.6s;
 }
 .empty-heart:hover {
   visibility: hidden;
@@ -15,6 +15,7 @@
   position: absolute;
   color: #9356DC;
   opacity: 0;
+  transition: all 0.6s;
 }
 .anim-heart:hover {
   transform: scale(1.1);
@@ -40,8 +41,12 @@
 }
 
 /* Animation sélection du plat/dessert/entrée */
+.card .box {
+  animation: select_return 1s ease-in-out forwards;
+}
+
 .card:hover .box {
-  animation: select 250ms ease-in-out forwards;
+  animation: select 1s ease-in-out forwards;
 }
 
 @keyframes select {
@@ -51,6 +56,15 @@
   100% {
     left: 0px;
     width: 60px;
+  }
+}
+@keyframes select_return {
+  0% {
+    left: 0px;
+    width: 60px;
+  }
+  100% {
+    width: 0px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -331,7 +345,7 @@ header .header__location .fa-solid {
 .hero h1 {
   font-size: 24px;
 }
-.hero h3 {
+.hero h2 {
   font-weight: 300;
   font-size: 18px;
 }
@@ -343,7 +357,7 @@ header .header__location .fa-solid {
   .hero h1 {
     margin: 10px 0 0 0;
   }
-  .hero h3 {
+  .hero h2 {
     font-size: 16px;
   }
 }
@@ -356,7 +370,7 @@ header .header__location .fa-solid {
     margin: 10px 0 0 0;
     width: 100%;
   }
-  .hero h3 {
+  .hero h2 {
     font-size: 16px;
   }
 }
@@ -369,7 +383,7 @@ header .header__location .fa-solid {
     margin: 10px 0 0 0;
     width: 100%;
   }
-  .hero h3 {
+  .hero h2 {
     font-size: 22px;
   }
 }
@@ -380,7 +394,7 @@ header .header__location .fa-solid {
   padding-top: 15px;
   margin-bottom: 30px;
 }
-.Fonctionnement h2 {
+.Fonctionnement h1 {
   padding-left: 10px;
 }
 .Fonctionnement .fonctionnement-textes {
@@ -393,6 +407,10 @@ header .header__location .fa-solid {
   border-radius: 25px;
   background-color: #F6F6F6;
   margin: 20px;
+}
+.Fonctionnement .fonctionnement-textes .fonctionnement-texte p {
+  font-weight: 600;
+  font-size: 18px;
 }
 .Fonctionnement .fonctionnement-textes .fonctionnement-texte .numero-fonctionnement {
   margin-top: auto;
@@ -468,7 +486,7 @@ header .header__location .fa-solid {
   flex-direction: column;
   background-color: #F6F6F6;
 }
-.Restaurants h2 {
+.Restaurants h1 {
   padding-top: 15px;
   padding-left: 10px;
 }
@@ -512,6 +530,10 @@ header .header__location .fa-solid {
 .Restaurants .cards-container .article-restaurant .txt-cards {
   line-height: 16px;
   padding: 0 0 0 12px;
+}
+.Restaurants .cards-container .article-restaurant .txt-cards h2 {
+  font-weight: 600;
+  font-size: 20px;
 }
 .Restaurants .cards-container .article-restaurant .cards-like {
   position: relative;
@@ -689,9 +711,11 @@ main .background .restaurant {
 main .background .restaurant .restaurant__heading {
   padding: 0 0 0px 0;
 }
-main .background .restaurant .restaurant__heading h2 {
+main .background .restaurant .restaurant__heading h1 {
   font-family: "Shrikhand", sans-serif;
   padding: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 20px;
 }
 main .background .restaurant .restaurant__heading .cards-like {
   width: 10%;
@@ -741,7 +765,7 @@ main .background .restaurant .cards .card .card-texte {
   overflow: hidden;
   white-space: nowrap;
 }
-main .background .restaurant .cards .card .card-texte h3 {
+main .background .restaurant .cards .card .card-texte h1 {
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -945,7 +969,7 @@ main .background .restaurant .cards .card .box .fa-circle-check {
     width: 10%;
     position: relative;
     left: 3%;
-    top: 45px;
+    top: 30px;
   }
   main .background .restaurant .Menu {
     display: flex;

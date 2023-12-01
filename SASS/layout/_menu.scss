@@ -19,9 +19,11 @@ main{
             .restaurant__heading { 
                 padding:0 0 0px 0;
     
-                h2{ 
+                h1{ 
                     font-family: "Shrikhand", sans-serif;
                     padding: 0 0 10px 0; 
+                    font-weight: 600;
+                    font-size: 20px;
                 } 
     
                 .cards-like{ 
@@ -80,7 +82,7 @@ main{
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
-                        h3{
+                        h1{
                             font-size: 18px;
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -337,7 +339,7 @@ main{
                         width: 10%;
                         position: relative; 
                         left: 3%;
-                        top: 45px;
+                        top: 30px;
                     } 
                 } 
                 .Menu{ 
