@@ -35,13 +35,6 @@
 
 @media screen and (min-width:1440px) {
     .Boutton-commande{
-        @include button-rounded;
-        @include centrage;
-        @include shadow;
-        background: $hero__button;
-        text-align: center;
-        
-        padding: 20px 0 20px 0;
         width: 186px;
     }
 }
