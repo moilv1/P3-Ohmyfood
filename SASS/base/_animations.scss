@@ -148,6 +148,38 @@
         border-left: solid 15px white;
     }
 }
+@media screen and (min-width:1441px){
+    .LoaderContainer{
+
+        span {
+            top: 14%;
+        }
+    }
+}
+@media screen and (min-width:1799px){
+    .LoaderContainer{
+
+        span {
+            top: 12%;
+        }
+    }
+}
+@media screen and (min-width:2199px){
+    .LoaderContainer{
+
+        span {
+            top: 10%;
+        }
+    }
+}
+@media screen and (min-width:2499px){
+    .LoaderContainer{
+
+        span {
+            top: 9%;
+        }
+    }
+}
 @keyframes rotate {   
     25%{
         transform: rotate(180deg);
