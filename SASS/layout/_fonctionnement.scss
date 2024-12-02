@@ -10,6 +10,7 @@
     }
     
     .fonctionnement-textes{
+        display: flex;
         flex-direction: column;
 
         .fonctionnement-texte{
@@ -43,7 +44,6 @@
 @media screen and (min-width:768px) and (max-width:1024px) {
     .Fonctionnement{
         .fonctionnement-textes{
-            display: flex;
             flex-direction: row;
             width: 100%;
             justify-content: center;
@@ -63,7 +63,6 @@
     .Fonctionnement{
         padding: 0 120px 0 120px;
         .fonctionnement-textes{
-            display: flex;
             flex-direction: row;
             width: 100%;
             justify-content: space-around;
