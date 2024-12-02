@@ -576,16 +576,16 @@ header .header__location .fa-solid {
   }
 }
 @media screen and (min-width: 1441px) {
-  .Restaurants {
+  #home .Restaurants {
     padding: 0 120px 0 120px;
   }
-  .Restaurants .cards-container {
+  #home .Restaurants .cards-container {
     flex-direction: row;
   }
-  .Restaurants .cards-container .article-restaurant {
+  #home .Restaurants .cards-container .article-restaurant {
     width: 40%;
   }
-  .Restaurants .cards-container .article-restaurant .cards-like {
+  #home .Restaurants .cards-container .article-restaurant .cards-like {
     left: 90%;
   }
 }
@@ -606,7 +606,7 @@ header .header__location .fa-solid {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10 px 0;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1052,7 +1052,7 @@ main .background .restaurant .cards .card .box .fa-circle-check {
     width: 10%;
     position: relative;
     left: 3%;
-    top: 30xpx;
+    top: 25px;
   }
   main .background .restaurant .Menu {
     display: flex;

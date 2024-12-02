@@ -103,19 +103,21 @@
 }
 
 @media screen and (min-width:1441px){
-    .Restaurants{
-        padding: 0 120px 0 120px;
-
-        .cards-container{
-            flex-direction: row;
-            
-            .article-restaurant{
-                width: 40%;
-
-                .cards-like{
-                    left: 90%;
-                }
+    #home {
+        .Restaurants{
+            padding: 0 120px 0 120px;
+    
+            .cards-container{
+                flex-direction: row;
                 
+                .article-restaurant{
+                    width: 40%;
+    
+                    .cards-like{
+                        left: 90%;
+                    }
+                    
+                }
             }
         }
     }
